@@ -16,4 +16,9 @@ terraform {
   resource "azurerm_resource_group" "rg" {
     location = "eastus2"
     name = "myTFResourceGroup"
+
+    tags = {
+      Environment = "Terraform Getting Started"
+      Team = "DevOps"
+    }
   }
