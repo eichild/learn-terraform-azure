@@ -107,7 +107,7 @@ resource "azurerm_virtual_machine" "vm" {
   storage_image_reference {
     publisher = "Canonical"
     offer = "UbuntuServer"
-    sku = "16.04.0-LTS"
+    sku = lookup(var.sku, var.location )
     version = "latest"
   }
 
